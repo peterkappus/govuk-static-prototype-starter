@@ -1,0 +1,26 @@
+// Non-GOV.UK hosting: no GDS Transport font, no crown crest.
+@use "govuk/index" as * with (
+  $govuk-assets-path: "/assets/",
+  $govuk-font-family: ("Schibsted Grotesk", arial, sans-serif),
+  $govuk-global-styles: true
+);
+
+// Footer always emits the crown SVG + copyright crest; hide both off GOV.UK.
+.govuk-footer__crown,
+.govuk-footer__copyright-logo {
+  display: none;
+}
+
+.govuk-footer__copyright-logo {
+  padding-top: 0;
+  background-image: none;
+
+  &::before {
+    content: none;
+    display: none;
+  }
+}
+
+.govuk-generic-header__homepage-link {
+  font-weight: 700;
+}

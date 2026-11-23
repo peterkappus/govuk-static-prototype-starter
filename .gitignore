@@ -1,0 +1,8 @@
+node_modules/
+_site/
+src/assets/css/main.css
+src/assets/css/main.css.map
+.DS_Store
+.env
+.env.*
+*.log

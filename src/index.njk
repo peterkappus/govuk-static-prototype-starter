@@ -1,0 +1,21 @@
+{% extends "layouts/base.njk" %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{% set title = "Service name" %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">{{ title }}</h1>
+      <p class="govuk-body-l">
+        Use this starter to build a static prototype with GOV.UK Frontend components,
+        without crown branding or the Transport typeface.
+      </p>
+      {{ govukButton({
+        text: "Start now",
+        href: "#",
+        isStartButton: true
+      }) }}
+    </div>
+  </div>
+{% endblock %}
